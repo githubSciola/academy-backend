@@ -10,3 +10,10 @@ language: java
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 jdk: oraclejdk8
+
+deploy:
+  provider: releases
+  api_key: "9d46674b7f30380ec87f13feb8ae847082237ac8"
+  skip_cleanup: true
+  on:
+    tags: true
